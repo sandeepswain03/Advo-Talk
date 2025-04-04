@@ -6,18 +6,16 @@ const CompliancePage = () => {
     const [activeSlide, setActiveSlide] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
 
-    // Check if viewport is mobile
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
         };
 
-        handleResize(); // Initial check
+        handleResize();
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    // Feature data
     const features = [
         {
             icon: "/landingPage/Tags/tags_1.svg",
@@ -36,7 +34,6 @@ const CompliancePage = () => {
         }
     ];
 
-    // Handle carousel navigation
     const goToSlide = (index: number) => {
         setActiveSlide(index);
     };
@@ -45,7 +42,7 @@ const CompliancePage = () => {
         <div className='bg-[#FCFBFA] py-20 md:py-32 px-4 lg:px-20'>
             {/* Header Section */}
             <div className="max-w-6xl mx-auto mb-16 sm:flex justify-between">
-                <h2 className="text-3xl md:text-4xl font-semibold  mb-4">Get <span className='text-[#285D60]'>compliant</span> faster</h2>
+                <h2 className="text-3xl md:text-4xl font-bold  mb-4">Get <span className='text-[#285D60]'>compliant</span> faster</h2>
                 <p className="text-gray-600 max-w-lg text-justify">
                     Mosey makes state compliance easy for your team no matter where your business operates. Offload the work of figuring out compliance and save thousands of dollars per year.
                 </p>

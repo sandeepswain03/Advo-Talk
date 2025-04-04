@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -41,17 +40,11 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`fixed top-0 left-0 right-0 z-50 flex justify-center px-4 py-2 mt-4 transition-all duration-300 ${scrolled ? 'mt-4' : ''}`}>
+            <nav className={`fixed top-0 left-0 right-0 z-50 flex justify-center px-4 py-2 mt-1 transition-all duration-300 ${scrolled ? 'mt-1' : ''}`}>
                 <div className={`max-w-[1380px] w-full mx-auto sm:rounded-lg rounded-xl px-6 py-2 flex items-center justify-between ${mobileMenuOpen ? 'bg-[#2A2A2A] md:bg-[#F3F1EC]' : 'bg-[#F3F1EC]'}`}>
                     <div className='hidden md:flex items-center space-x-4'>
                         <Link href="/" className={`text-2xl font-extrabold ${mobileMenuOpen ? 'text-white md:text-[#285D60]' : 'text-[#285D60]'}`}>
-                            <Image
-                                src="/Logo/Advotalk_main.png"
-                                alt="mosey logo"
-                                width={50}
-                                height={50}
-                                className='object-contain'
-                            />
+                            Advotalk
                         </Link>
                         {navLinks.map(link => (
                             <Link key={link.href} href={link.href} className="text-md font-semibold text-gray-400 hover:text-gray-900 transition-all duration-300">
@@ -67,23 +60,17 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    <div className="flex md:hidden items-center space-x-4">
+                    <div className="flex md:hidden items-center space-x-2">
                         <Link href="/" className={`text-lg font-bold ${mobileMenuOpen ? 'text-white md:text-[#285D60]' : 'text-[#285D60]'}`}>
-                            <Image
-                                src="/Logo/Advotalk_main.png"
-                                alt="mosey logo"
-                                width={50}
-                                height={50}
-                                className='object-contain'
-                            />
+                            Advotalk
                         </Link>
-                        <div className='flex'>
+                        <div className='flex gap-1'>
                             <Link href="/consultation" className={`bg-[#C74E5C] text-white text-sm p-2 rounded-xl hover:bg-opacity-90 transition-all whitespace-nowrap ${mobileMenuOpen ? 'hidden' : 'block'}`}>
                                 Schedule a free consultation
                             </Link>
                             <button
                                 onClick={toggleMobileMenu}
-                                className={`p-2 rounded-md ${mobileMenuOpen ? 'bg-transparent text-white' : 'text-gray-900'}`}
+                                className={`p-2 rounded-md bg-[#E4E4DC] ${mobileMenuOpen ? 'bg-transparent text-white' : 'text-gray-900'}`}
                                 aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
                             >
                                 {mobileMenuOpen ? <X size={20} /> : (
@@ -113,16 +100,10 @@ const Navbar = () => {
                         >
                             <div className="flex justify-between items-center px-4 py-3 bg-[#2A2A2A] rounded-t-3xl">
                                 <Link href="/" className="text-xl font-bold text-white">
-                                    <Image
-                                        src="/Logo/Advotalk_main.png"
-                                        alt="mosey logo"
-                                        width={50}
-                                        height={50}
-                                        className='object-contain'
-                                    />
+                                    Advotalk
                                 </Link>
-                                <div className="flex items-center space-x-2">
-                                    <Link href="/consultation" className="bg-[#C74E5C] text-white text-sm px-4 py-2 rounded-xl hover:bg-opacity-90 transition-all whitespace-nowrap">
+                                <div className="flex items-center space-x-1">
+                                    <Link href="/consultation" className="bg-[#C74E5C] text-white text-sm p-2 rounded-xl hover:bg-opacity-90 transition-all whitespace-nowrap">
                                         Schedule a free consultation
                                     </Link>
                                     <button
@@ -152,7 +133,7 @@ const Navbar = () => {
                             </div>
                             <div className="px-5 mt-auto pt-16 pb-5 w-full bg-[#2A2A2A] rounded-b-3xl mb-10">
                                 <p className="text-sm text-gray-400 mb-4">
-                                    Mosey has everything you need to get compliant in all 50 states in one, easy to use, platform.
+                                    Advotalk has everything you need to get compliant in all 50 states in one, easy to use, platform.
                                 </p>
                                 <Link
                                     href="/consultation"

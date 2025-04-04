@@ -88,7 +88,7 @@ const Footer = () => {
       {/* Mobile Footer - Shown only on small screens */}
       <div className="md:hidden px-6 py-8">
         <div className="mb-8">
-          <div className="text-white text-2xl font-semibold mb-2">mosey</div>
+          <div className="text-white text-2xl font-semibold mb-2">Advotalk</div>
           <p className="text-gray-400 font-semibold text-sm">
             The easy way to do state compliance.
           </p>
@@ -137,7 +137,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-5 mb-12">
             {/* Logo and Tagline */}
             <div className="col-span-1">
-              <div className="text-white text-2xl font-semibold mb-4">mosey</div>
+              <div className="text-white text-2xl font-semibold mb-4">Advotalk</div>
               <p className="text-gray-400 font-semibold text-sm">
                 The easy way to do state compliance.
               </p>
